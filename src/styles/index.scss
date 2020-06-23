@@ -1,5 +1,11 @@
 // config
-@import "variables.scss";
+@import "variables";
 
 // layout
-@import "reboot.scss";
+@import "reboot";
+
+// mixin
+@import "mixin";
+
+// button
+@import "../components/Button/style";
