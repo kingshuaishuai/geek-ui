@@ -1,0 +1,40 @@
+.alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  border: 1px solid transparent;
+  border-radius: $alert-border-radius;
+  @include alert-style($primary);
+}
+
+.alert-info {
+  @include alert-style($info);
+}
+
+.alert-success {
+  @include alert-style($success);
+}
+
+.alert-warning {
+  @include alert-style($warning);
+}
+
+.alert-danger {
+  @include alert-style($danger);
+}
+
+.alert-message {
+  display: block;
+}
+
+.alert-description {
+  display: block;
+  color: $gray-700;
+}
+
+.alert-close-btn {
+  position: absolute;
+  cursor: pointer;
+  top: .25rem;
+  right: .25rem;
+  color: $gray-600;
+}

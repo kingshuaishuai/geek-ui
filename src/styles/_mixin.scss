@@ -33,3 +33,13 @@
     border-color: $border;
   }
 }
+
+@mixin alert-style(
+  $border,
+  $background: lighten($border, 35%),
+  $color: $body-color
+) {
+  border-color: $border;
+  background: $background;
+  color: $color;
+}

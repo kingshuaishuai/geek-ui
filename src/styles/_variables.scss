@@ -277,3 +277,8 @@ $progress-bg:                       $gray-200 !default;
 $progress-border-radius:            $border-radius !default;
 $progress-bar-color:                $white !default;
 $progress-bar-transition:           width .6s ease !default;
+
+// Alert
+$alert-padding-y:                   .375rem !default;
+$alert-padding-x:                   1.25rem !default;
+$alert-border-radius:               $border-radius !default;
