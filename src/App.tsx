@@ -1,29 +1,39 @@
 import React from 'react';
 // import Button, { ButtonSize, ButtonType } from './components/Button/button';
-import Alert, { AlertType } from './components/Alert/alert';
+// import Alert, { AlertType } from './components/Alert/alert';
+import Menu from './components/Menu/menu';
+import SubMenu from './components/Menu/subMenu';
+import MenuItem from './components/Menu/menuItem';
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <div className="alert-container">
+      <Menu
+        className="my-menu"
+        defaultIndex="2-1"
+        onSelect={(index) => {
+          console.log(index);
+        }}
+        mode="vertical"
+        defaultOpenSubMenus={['2']}
+      >
+        <MenuItem>menu item1</MenuItem>
+        <MenuItem disabled>menu item2</MenuItem>
+        <SubMenu title="dropdown">
+          <MenuItem>dropdown1</MenuItem>
+          <MenuItem>dropdown2</MenuItem>
+        </SubMenu>
+        <MenuItem>menu item3</MenuItem>
+      </Menu>
+      {/* <div className="alert-container">
         <Alert message="this is alert" description="this is description" closable/>
         <Alert type={AlertType.Success} message="this is alert" closable onClose={() => {console.log('close')}}/>
         <Alert type={AlertType.Warning} message="this is alert" closable/>
         <Alert type={AlertType.Danger} message="this is alert" closable/>
         <Alert type={AlertType.Info} message="this is alert" closable/>
-      </div>
+      </div> */}
       <header className="App-header">
-      {/* <Button size={ButtonSize.Large} onClick={() => console.log('a')}>Hello World</Button>
-      <Button>Hello World</Button>
-      <Button autoFocus size={ButtonSize.Small}>autoFocus</Button>
-      <Button className="custom" btnType={ButtonType.Primary}>custom</Button>
-      <Button btnType={ButtonType.Danger}>Hello World</Button>
-      <Button btnType={ButtonType.Success}>Hello World</Button>
-      <Button btnType={ButtonType.Warning}>Hello World</Button>
-      <Button disabled>Hello World</Button>
-      <Button btnType={ButtonType.Link} href="http://www.baidu.com" target="_blank">Hello World</Button>
-      <Button btnType={ButtonType.Link} href="http://www.baidu.com" disabled>Hello World</Button> */}
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
